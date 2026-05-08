@@ -1,6 +1,7 @@
 #include<iostream>
 #include<fstream>
 #include<string>
+#include<vector>
 using namespace std;
 
 struct Question{
@@ -26,15 +27,12 @@ int main() {
     }
     Question curr;
     string line;
+    vector<Question> questions;
     while(getline(file, line)){
         //.find() and string::npos finds the line with given start
         if(line.find("\\question") != string::npos){
             if(curr.que != ""){
-                cout<<"Question: "<<curr.que<<endl;
-                cout<<"Marks: "<<curr.marks<<endl;
-                cout<<"Format: "<<curr.format<<endl;
-                cout<<"Difficulty: "<<curr.difficulty<<endl;
-                cout<<"Options: "<<curr.options<<endl<<endl;
+                questions.push_back(curr);
             }
             curr = Question();
             curr.que = extractLine(line);
@@ -48,18 +46,22 @@ int main() {
         else if(line.find("\\difficulty") != string::npos){
             curr.difficulty = extractLine(line);
         }
-        if(line.find("\\options") != string::npos){
+        else if(line.find("\\options") != string::npos){
             curr.options = extractLine(line);
         }
         // cout<<endl;
     }
     if(curr.que != ""){
-        cout<<"Question: "<<curr.que<<endl;
-        cout<<"Marks: "<<curr.marks<<endl;
-        cout<<"Format: "<<curr.format<<endl;
-        cout<<"Difficulty"<<curr.difficulty<<endl;
-        cout<<"Options"<<curr.options<<endl<<endl;
+        questions.push_back(curr);
     }
+    for(int i = 0; i < questions.size(); i++){
+        cout<<"Question: "<<questions[i].que<<endl;
+        cout<<"Marks: "<<questions[i].marks<<endl;
+        cout<<"Format: "<<questions[i].format<<endl;
+        cout<<"Difficulty: "<<questions[i].difficulty<<endl;
+        cout<<"Options: "<<questions[i].options<<endl<<endl;
+    }
+    cout<<"Number of questions: "<<questions.size();
     file.close();
     return 0;
 }
