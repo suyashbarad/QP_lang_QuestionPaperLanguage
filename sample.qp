@@ -1,18 +1,11 @@
-\question{How many newtons laws are there?}
+\question{Define velocity}
 \marks{2}
-\format{MCQ}
+\format{theory}
 \difficulty{easy}
-\options{1, 2, 3, 4}
+\options{None}
 
-\question{How many newtons laws are there?}
-\marks{2}
-\format{MCQ}
-\difficulty{easy}
-\options{1, 2, 3, 4}
-
-\question{How many newtons laws are there?}
-\marks{2}
-\format{MCQ}
-\difficulty{easy}
-\options{1, 2, 3, 4}
-
+\question{Find acceleration when u=0, v=20, t=4}
+\marks{4}
+\format{numerical}
+\difficulty{medium}
+\options{None}
