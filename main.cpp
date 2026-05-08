@@ -25,6 +25,10 @@ int main() {
         cout<<"Error opening file! ";
         return 1;
     }
+    cout<<"----------------------------------------------\n";
+    cout<<"                Question Paper                \n";
+    cout<<"----------------------------------------------\n\n";
+
     Question curr;
     string line;
     vector<Question> questions;
@@ -55,12 +59,16 @@ int main() {
         questions.push_back(curr);
     }
     for(int i = 0; i < questions.size(); i++){
-        cout<<"Question: "<<questions[i].que<<endl;
-        cout<<"Marks: "<<questions[i].marks<<endl;
-        cout<<"Format: "<<questions[i].format<<endl;
-        cout<<"Difficulty: "<<questions[i].difficulty<<endl;
-        cout<<"Options: "<<questions[i].options<<endl<<endl;
+        cout<<"Q"<<i+1<<". "<<questions[i].que
+        <<" ("<<questions[i].marks<<" marks)"<<endl<<endl;
     }
+    //optional if want to print these details: 
+    
+    // for(int i = 0; i < questions.size(); i++){
+    //     cout<<"Options: "<<questions[i].options<<endl<<
+    //     "Difficulty: "<<questions[i].difficulty<<"   Format: "    
+    //     <<questions[i].format<<endl<<endl;
+    // }
     cout<<"Number of questions: "<<questions.size();
     file.close();
     return 0;
