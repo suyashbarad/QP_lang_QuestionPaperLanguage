@@ -10,6 +10,7 @@ struct Question{
     string format;
     string difficulty;
     string options;
+    string answer;
 };
 
 string extractLine(string line){
@@ -51,7 +52,18 @@ int main() {
             curr.difficulty = extractLine(line);
         }
         else if(line.find("\\options") != string::npos){
-            curr.options = extractLine(line);
+            string optLine;
+            string allOpt = "";
+            while(getline(file, optLine)){
+                if(optLine.find("}")){
+                    break;
+                }
+                allOpt += optLine + "\n";
+            }
+            curr.options = allOpt;
+        }
+        else if(line.find("\\answer") != string::npos){
+            curr.answer = extractLine(line);
         }
         // cout<<endl;
     }
@@ -61,9 +73,21 @@ int main() {
     for(int i = 0; i < questions.size(); i++){
         cout<<"Q"<<i+1<<". "<<questions[i].que
         <<" ("<<questions[i].marks<<" marks)"<<endl<<endl;
+
+        if(questions[i].format == "MCQ"){
+            cout<<questions[i].options<<endl;
+        }
+    }
+    cout<<"----------------------------------------------\n";
+    cout<<"                  Answer Key                  \n";
+    cout<<"----------------------------------------------\n\n";
+
+    for(int i = 0; i < questions.size(); i++){
+        if(questions[i].format == "MCQ") {
+            cout<<"Q"<<i+1<<": "<<questions[i].answer<<endl;
+        }
     }
     //optional if want to print these details: 
-    
     // for(int i = 0; i < questions.size(); i++){
     //     cout<<"Options: "<<questions[i].options<<endl<<
     //     "Difficulty: "<<questions[i].difficulty<<"   Format: "    
