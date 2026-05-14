@@ -34,11 +34,25 @@ This project includes a C++ parser that reads QP Lang files and generates a clea
 \difficulty{easy}
 \options{None}
 
+
 \question{Find acceleration when u=0, v=20, t=4}
 \marks{4}
 \format{numerical}
 \difficulty{medium}
 \options{None}
+
+\question{How many newtons laws are there? }
+\marks{4}
+\format{MCQ}
+\difficulty{easy}
+\options{
+    A. One
+    B. Two
+    C. there
+    D. No Laws
+}
+\answer{C}
+
 ```
 
 # Output:
@@ -51,7 +65,15 @@ Q1. Define velocity (2 marks)
 
 Q2. Find acceleration when u=0, v=20, t=4 (4 marks)
 
-Number of questions: 2
+Q3. How many newtons laws are there?  (4 marks)
+
+
+----------------------------------------------
+                  Answer Key                  
+----------------------------------------------
+
+Q3: C
+Number of questions: 3 
 ```
 
 # Structure
