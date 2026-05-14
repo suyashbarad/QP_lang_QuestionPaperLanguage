@@ -4,8 +4,22 @@
 \difficulty{easy}
 \options{None}
 
+
 \question{Find acceleration when u=0, v=20, t=4}
 \marks{4}
 \format{numerical}
 \difficulty{medium}
 \options{None}
+
+\question{How many newtons laws are there? }
+\marks{4}
+\format{MCQ}
+\difficulty{easy}
+\options{
+    A. One
+    B. Two
+    C. there
+    D. No Laws
+}
+\answer{C}
+
