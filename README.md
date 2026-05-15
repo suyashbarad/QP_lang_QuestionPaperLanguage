@@ -82,6 +82,7 @@ Number of questions: 3
 `│`<br>
 `├── main.cpp        # C++ parser`<br>
 `├── sample.qp       # Input file (QP Lang)`<br>
+`└── output.txt      # Output file (Final Question paper)`<br>
 `└── README.md       # Documentation`<br>
 
 
