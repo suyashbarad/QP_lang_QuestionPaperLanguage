@@ -56,6 +56,7 @@ This project includes a C++ parser that reads QP Lang files and generates a clea
 ```
 
 # Output:
+```Output.txt```
 ```
 ----------------------------------------------
                 Question Paper                
@@ -66,8 +67,9 @@ Q1. Define velocity (2 marks)
 Q2. Find acceleration when u=0, v=20, t=4 (4 marks)
 
 Q3. How many newtons laws are there?  (4 marks)
-
-
+```
+```ansKey.txt```
+```
 ----------------------------------------------
                   Answer Key                  
 ----------------------------------------------
@@ -83,6 +85,7 @@ Number of questions: 3
 `├── main.cpp        # C++ parser`<br>
 `├── sample.qp       # Input file (QP Lang)`<br>
 `└── output.txt      # Output file (Final Question paper)`<br>
+`└── ansKey.txt      # Answers file (Final Anskey)`<br>
 `└── README.md       # Documentation`<br>
 
 
